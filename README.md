@@ -8,5 +8,11 @@ HTTP code 307 is used to redirect browsers so that the HTTP method does not
 change (which would happen with old clients using 301/302).
 
 Running:
+--------
 
 ``docker run --rm -p80:80 -d realkinetic/http-to-https:latest``.
+
+Building
+--------
+
+``make build``
