@@ -1,5 +1,6 @@
 DOCKER_BASE=realkinetic/http-to-https
 DOCKER_TAG=1.0
+$(eval GIT_COMMIT = $(shell git rev-parse HEAD))
 
 ALPINE_VERSION=3.7
 
@@ -11,6 +12,8 @@ clean:
 Dockerfile: Dockerfile.template
 	sed \
 		-e 's!{{ .AlpineVersion }}!'"$(ALPINE_VERSION)"'!g' \
+		-e 's!{{ .Version }}!'"$(DOCKER_TAG)"'!g' \
+		-e 's!{{ .GitCommit }}!'"$(GIT_COMMIT)"'!g' \
 		Dockerfile.template > Dockerfile
 
 build: Dockerfile
