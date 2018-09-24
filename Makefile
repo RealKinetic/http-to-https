@@ -1,8 +1,9 @@
-DOCKER_BASE=realkinetic/http-to-https
-DOCKER_TAG=1.0
 $(eval GIT_COMMIT = $(shell git rev-parse HEAD))
 
-ALPINE_VERSION=3.7
+ALPINE_VERSION=3.8
+
+DOCKER_BASE=realkinetic/http-to-https
+DOCKER_TAG=1.1
 
 default: build
 
