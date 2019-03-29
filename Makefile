@@ -1,9 +1,9 @@
 $(eval GIT_COMMIT = $(shell git rev-parse HEAD))
 
-ALPINE_VERSION=3.8
+ALPINE_VERSION=3.9
 
 DOCKER_BASE=realkinetic/http-to-https
-DOCKER_TAG=1.1
+DOCKER_TAG=1.2
 
 default: build
 
