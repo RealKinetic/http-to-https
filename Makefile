@@ -1,6 +1,6 @@
 $(eval GIT_COMMIT = $(shell git rev-parse HEAD))
 
-ALPINE_VERSION=3.9
+ALPINE_VERSION=3.11
 
 DOCKER_BASE=realkinetic/http-to-https
 DOCKER_TAG=1.2
